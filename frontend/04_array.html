@@ -13,8 +13,8 @@
 
         var width  = window.innerWidth;
         var height = window.innerHeight;
-        var x      = Math.floor(random()*width);
-        var y      = Math.floor(random()*height);
+        var x      = Math.floor(Math.random()*width);
+        var y      = Math.floor(Math.random()*height);
         return {x,y};
     }
 
@@ -23,7 +23,7 @@
         document.getElementsByTagName('body')[0].appendChild(element);
     }
 
-    function addCircle(position){
+    function createElement(position){
 
         var div = document.createElement('div');
         div.style.zIndex        = '1';
@@ -40,10 +40,10 @@
 
     function addCircles(){
 
-        var circles = [];
+        var circles  = [];
         var position = null;
 
-        for(var i=0; i<10; i++){
+        for(var i = 0; i < 10; i++){
 
             position   = randomPosition();
             circles[i] = createElement(position);
